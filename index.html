@@ -7,17 +7,20 @@
                 a:visited {color:#f26246;}
                 a:hover {color:#46D6F2;}
                 body {background-color: #EFEFEF;}
-                h1 {text-align:center;font-size:8vw;font-family: palatino; color:#CAEBF2}
-                h2 {font-size: 4vw;font-family: arial;text-align: center;}
-                nav {font-size:2.5vw; font-family: monospace; text-align: center;}
+                h1 {text-align:center;font-size:8.5vw;font-family: Lucida Sans Unicode; color:#AAAAAA}
+                h2 {font-size: 3vw;font-family: arial;text-align: center;}
+                h3 {font-size: 1.75vw;}
+                h4 {font-size: 1.40vw;}
+                nav {font-size:3vw; font-family: monospace; text-align: center;}
                 p {font-size:1.5vw; font-family: arial;}
                 table#t01 {border-spacing: 1vw; border: .5vw solid black;}
                 th {text-align: left; width: 10vw;}
                 
-                .column {float: left;width: 32%;}
+                .column {float: left;width: 32%; font-size: 1.25vw;}
+                .exp {font-size: 1.25vw;}
                 .nav {display:inline;}
                 .nav a {text-align: center;padding: 3vw;text-decoration: none;}
-                .row {content: "";display: table;clear: both; height:30vw;}
+                .row {content: "";display: table;clear: both; height:20vw;}
             </style>
             <meta name='description' content="Michael Zhang's Website">
             <meta name='keywords' content="Cornell, CS, Developer, Software, Data, Science">
@@ -26,9 +29,9 @@
         </head>
         
         <body>
-            <p style="text-align: right; font-size:1.5vw;"><a href= "PersonalWebsite/contact-form/formpage.html" title= "Contact" target=_blank>Contact</a></p>
+            <p style="text-align: right; font-size:1.5vw;"><a href= "#Ct" title= "Contact">Contact</a></p>
             <div> <!--Title-->
-               <h1>MICHAEL ZHANG</h1>
+               <h1>Michael Zhang</h1>
                <h2 style="text-align: center; font-size: 2.8vw;">Aspiring Software Developer and Data Scientist</h2>
             </div>
             
@@ -50,7 +53,7 @@
             
             <div><!-- Coursework-->
                 <h2 id="Cw">Coursework</h2>
-                <table id ="t01" style="width:100%; font-size:1.5vw; margin:0px auto;">
+                <table id ="t01" style="width:100%; font-size:1.5vw; margin:0px auto;font-family: arial;">
                     <tr><!-- headers -->
                         <th>Course Name</th>
                         <th>Course Description</th>
@@ -116,35 +119,35 @@
                 <!-- NECYSC-->
                 <div>
                     <h4>New England Chinese Youth Summer Camp -- Counselor (Summer 2016-Present)</h4>
-                    <p>Leads group of 15 campers throughout the week as a camp counselor in various activities relating to Chinese culture.
+                    <p class=exp>Leads group of 15 campers throughout the week as a camp counselor in various activities relating to Chinese culture.
                     Organizes nightly activities for the entire camp of around 300 campers.
                     </p>
                 </div>
                 <!-- StopShop -->
                 <div>
                     <h4>Stop & Shop -- Front End Associate (Summer 2018-Present)</h4>
-                    <p>
+                    <p class=exp>
                         Assists in the daily operation of the store; helps customers check out and keeps shelves stocked.
                     </p>
                 </div>
                 <!-- Atlantis -->
                 <div>
                     <h4>Atlantis Technology -- Data Curation Intern (Summer 2017)</h4>
-                    <p>Collaborated with engineering and product teams to build a stealth-mode SaaS product that launched late summer 2017.
+                    <p class=exp>Collaborated with engineering and product teams to build a stealth-mode SaaS product that launched late summer 2017.
                     Curated healthcare contact information using Microsoft Excel.
                     </p>
                 </div>
                 <!-- InspireDo -->
                 <div>
                     <h4>InspireDo -- Tutor (Summer 2016-2017)</h4>
-                    <p>
+                    <p class=exp>
                         Worked with students on a weekly basis to create personalized study plans in order to meet their goals for the SAT/ACT.
                     </p>
                 </div>
                 <!-- Kumon Learning Center -->
                 <div>
                     <h4>Kumon Learning Center -- Tutor (2015-2016)</h4>
-                    <p>
+                    <p class=exp>
                         Promoted the development of students’ reading comprehension and math skills by reviewing their work and explaining concepts.
                     </p>
                 </div>
@@ -152,7 +155,7 @@
                 <!-- ACSU -->
                 <div>
                     <h4>Association of Computer Science Undergraduates -- Social Team Officer (2017-Present)</h4>
-                    <p>
+                    <p class=exp>
                         Plans and helps set up social events for the community of Computer Science undergraduates at Cornell.
                         Runs the mentorship program between new and returning members.
                     </p>
@@ -160,29 +163,34 @@
                 <!-- Spike -->
                 <div>
                     <h4>Cornell Spikeball Club -- Co-President (2017-Present)</h4>
-                    <p>
+                    <p class=exp>
                         Co-Founded the Spikeball Club at Cornell University. Organizes practices and trips to tournaments for a 15 member team.
                     </p>
                 </div>
                 <!--CDS -->
                 <div>
                     <h4>Cornell Data Science (2017-Present)</h4>
-                    <p>
+                    <p class=exp>
                         Created machine learning models for a housing dataset in order to predict sale prices.
                         Exploring machine learning techniques used in Python.
                     </p>
                 </div>
-                <p style="text-align: center;">Summary: <a href="PersonalWebsite/CSResume.pdf" target="_blank" title="Michael's Resume">Re&#769sume&#769</a></p>
+                <p style="text-align:center;font-size: 1.75vw;">Summary: <a href="PersonalWebsite/CSResume.pdf" target="_blank" title="Michael's Resume">Re&#769sume&#769</a></p>
             </div>
             
             <div><!-- Contact -->
                 <h2 id = "Ct">Contact</h2>
-                <form action="PersonalWebsite/contact-form/handler.php">
-                    <input type="text" name="name" placeholder="Enter Name"><br>
-                    <input type="email" name="email" placeholder="Enter Email"><br>
-                    <textarea rows="3" name="message" placeholder="Type Your Message"></textarea><br>
-                    <input type="submit" value="Submit">
-                </form>
+                <button onclick="myFunction();">Copy text</button>
+                <script>
+                    function myFunction() {
+                    var copyText = "maz62@cornell.edu";
+                    copyText.select();
+                    document.execCommand("copy");
+                    alert("Copied the text: " + copyText.value);
+                }
+                </script>
+                
+     
             </div>
         </body>
     </html>
