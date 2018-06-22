@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Michael Zhang's Webpage</title>
+            <style>
+                a:link {color:darksalmon;}
+                a:visited {color:#f26246;}
+                a:hover {color:#46D6F2;}
+                body {background-color: white;}
+                h1 {text-align:center;font-size:8vw;font-family: palatino;}
+                h2 {font-size: 4vw;font-family: arial;text-align: center;}
+                nav {font-size:2.5vw; font-family: monospace; text-align: center;}
+                p {font-size:1.5vw; font-family: arial;}
+                table#t01 {border-spacing: 1vw; border: .5vw solid black;}
+                th {text-align: left; width: 10vw;}
+                
+                .column {float: left;width: 32%; height: 30vw;}
+                .nav {display:inline;}
+                .nav a {text-align: center;padding: 3vw;text-decoration: none;}
+                .row:after {content: "";display: table;clear: both;}
+            </style>
+            <meta name='description' content="Michael Zhang's Website">
+            <meta name='keywords' content="Cornell, CS, Developer, Software, Data, Science">
+            <meta name='author' content='Michael Zhang'>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        
+        <body>
+            <p style="text-align: right; font-size:1.5vw;"><a href= "PersonalWebsite/contact-form/formpage.html" title= "Contact">Contact</a></p>
+            <div> <!--Title-->
+               <h1>MICHAEL ZHANG</h1>
+               <h2 style="text-align: center; font-size: 2.8vw;">Aspiring Software Developer and Data Scientist</h2>
+            </div>
+            
+            <nav><!--Nav Bar-->
+                <ul style="list-style-type: none; margin: 0; padding: 0; background-color: #E0E0E0;">
+                    <li class="nav"><a href= "#Ov" title="Overview">Overview</a></li>
+                    <li class="nav"><a href= "#Cw" title="Coursework">Coursework</a></li>
+                    <li class="nav"><a href= "#Pr" title="Projects">Projects</a></li>
+                    <li class="nav"><a href= "#Ex" title="Experience">Experience</a></li>
+                </ul>
+            </nav>
+            
+            <div style='padding:1vw'><!--Overview-->
+                <h2 id="Ov">Overview</h2>
+                <p style='text-align: center;'>Hello! I'm Michael and I'm a sophomore studying computer science at Cornell University.
+                I'm interested in web development, software development, and data science. I'm highly motivated and willing to learn.</p>
+                <p style="text-align: center;"><a href="PersonalWebsite/CSResume.pdf" target="_blank" title="Michael's Resume">Re&#769sume&#769</a></p>
+                
+                <img src="PersonalWebsite/headshot.jpeg" alt="Headshot" title= "Headshot" style="width:15vw;height:15.84vw;margin:0px auto;display: block;"></img>
+            </div>
+            
+            <div><!-- Coursework-->
+                <h2 id="Cw">Coursework</h2>
+                <table id ="t01" style="width:100%; font-size:1.5vw; margin:0px auto;">
+                    <tr><!-- headers -->
+                        <th>Course Name</th>
+                        <th>Course Description</th>
+                        <th>Learn More</th>
+                    </tr>
+                    <tr><!-- row 1 -->
+                        <td>CS1110: Introduction to Programming</td>
+                        <td>Programming and problem solving using Python.
+                        Emphasizes principles of software development, style, and testing.
+                        Topics include procedures and functions, iteration, recursion, arrays and vectors, strings, an operational model
+                        of procedure and function calls, algorithms, exceptions, object-oriented programming, and GUIs (graphical user interfaces).
+                        Weekly labs provide guided practice on the computer, with staff present to help.
+                        Assignments may use graphics and GUIs to help develop fluency and understanding.</td>
+                        <td><a href="https://www.cs.cornell.edu/courses/cs1110/" target="_blank" title="https://www.cs.cornell.edu/courses/cs1110/">
+                        Course Website</a></td>
+                    </tr>
+                    <tr><!-- row 2 -->
+                        <td>CS2110: Object Oriented Programming and Data Structures</td>
+                        <td>Intermediate programming in a high-level language and introduction to computer science.
+                        Topics include program structure and organization, object-oriented programming (classes, objects, types, sub-typing),
+                        graphical user interfaces, algorithm analysis (asymptotic complexity, big O notation), recursion,
+                        data structures (lists, trees, stacks, queues, heaps, search trees, hash tables, graphs), graph algorithms.
+                        Java is the principal programming language.</td>
+                        <td><a href="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html" target="_blank"
+                        title="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html">Course Website</a></td>
+                    </tr>
+                    <tr><!-- row 3 -->
+                        <td>CS2800: Discrete Structures</td>
+                        <td>This course covers the mathematical concepts that underlie computer science, including: induction, combinatorics, basic probability,
+                        sets, functions and relations, number theory, regular expressions and finite automata, graph theory, basic propositional and first-order logic.
+                        Careful mathematical reasoning and argument are a major theme of the course. Students are required to write a large number of clear,
+                        rigorous proofs and to work with precise definitions.</td>
+                        <td><a href="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018" target="_blank"
+                        title="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018">Course Website</a></td>
+                    </tr>
+                    <tr><!-- row 4 -->
+                        <td>INFO1998: Introduction to Machine Learning</td>
+                        <td> This course introduces various machine learning models,
+                        visualization techniques, and data manipulation strategies, with applications in the Python
+                        programming language.</td>
+                        <td><a href="https://junyounglim.github.io/machine-learning-course/" target="_blank"
+                        title="https://junyounglim.github.io/machine-learning-course/">Course Website</a></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div><!--Projects -->
+                <h2 id="Pr">Projects</h2>
+                    <div class="row">
+                        <!-- Website -->
+                        <div class= "column"><h3 style="text-align: center;">This Website!</h3>I taught myself HTML, CSS, and JavaScript in order to make this website.</div>
+                        <!-- Spotify -->
+                        <div class= "column"><h3 style="text-align: center;">Spotify New Music Notifications</h3>Using JavaScript, I created a Chrome extension that notifies the user when
+                    the artists they follow on Spotify release new music.</div>
+                        <!-- Swift -->
+                        <div class= "column"><h3 style="text-align: center;">iPhone App</h3> Using Swift, I created an iPhone app.</div>
+                    </div>
+            </div>
+            
+            <div><!-- Experience-->
+                <h2 id ="Ex">Experience</h2>
+                <h3>Jobs</h3>
+                <!-- NECYSC-->
+                <div>
+                    <h4>New England Chinese Youth Summer Camp -- Counselor (Summer 2016-Present)</h4>
+                    <p>Leads group of 15 campers throughout the week as a camp counselor in various activities relating to Chinese culture.
+                    Organizes nightly activities for the entire camp of around 300 campers.
+                    </p>
+                </div>
+                <!-- StopShop -->
+                <div>
+                    <h4>Stop & Shop -- Front End Associate (Summer 2018-Present)</h4>
+                    <p>
+                        Assists in the daily operation of the store; helps customers check out and keeps shelves stocked.
+                    </p>
+                </div>
+                <!-- Atlantis -->
+                <div>
+                    <h4>Atlantis Technology -- Data Curation Intern (Summer 2017)</h4>
+                    <p>Collaborated with engineering and product teams to build a stealth-mode SaaS product that launched late summer 2017.
+                    Curated healthcare contact information using Microsoft Excel.
+                    </p>
+                </div>
+                <!-- InspireDo -->
+                <div>
+                    <h4>InspireDo -- Tutor (Summer 2016-2017)</h4>
+                    <p>
+                        Worked with students on a weekly basis to create personalized study plans in order to meet their goals for the SAT/ACT.
+                    </p>
+                </div>
+                <!-- Kumon Learning Center -->
+                <div>
+                    <h4>Kumon Learning Center -- Tutor (2015-2016)</h4>
+                    <p>
+                        Promoted the development of students’ reading comprehension and math skills by reviewing their work and explaining concepts.
+                    </p>
+                </div>
+                <h3>Extracurriculars</h3>
+                <!-- ACSU -->
+                <div>
+                    <h4>Association of Computer Science Undergraduates -- Social Team Officer (2017-Present)</h4>
+                    <p>
+                        Plans and helps set up social events for the community of Computer Science undergraduates at Cornell.
+                        Runs the mentorship program between new and returning members.
+                    </p>
+                </div>
+                <!-- Spike -->
+                <div>
+                    <h4>Cornell Spikeball Club -- Co-President (2017-Present)</h4>
+                    <p>
+                        Co-Founded the Spikeball Club at Cornell University. Organizes practices and trips to tournaments for a 15 member team.
+                    </p>
+                </div>
+                <!--CDS -->
+                <div>
+                    <h4>Cornell Data Science (2017-Present)</h4>
+                    <p>
+                        Created machine learning models for a housing dataset in order to predict sale prices.
+                        Exploring machine learning techniques used in Python.
+                    </p>
+                </div>
+            </div>
+            
+            <div><!-- Contact -->
+                <h2 id = "Ct">Contact</h2>
+                <form action="PersonalWebsite/contact-form/handler.php">
+                    <input type="text" name="name" placeholder="Enter Name"><br>
+                    <input type="email" name="email" placeholder="Enter Email"><br>
+                    <textarea rows="3" name="message" placeholder="Type Your Message"></textarea><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </body>
+    </html>
