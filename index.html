@@ -178,17 +178,21 @@
                 <p style="text-align:center;font-size: 1.75vw;">Summary: <a href="PersonalWebsite/CSResume.pdf" target="_blank" title="Michael's Resume">Re&#769sume&#769</a></p>
             </div>
             
-            <div><!-- Contact -->
+            <div style="text-align: center;"><!-- Contact -->
                 <h2 id = "Ct">Contact</h2>
-                <button onclick="myFunction();">Copy text</button>
+                <input type="text" value="maz62@cornell.edu" id="myInput" style="width: 0%">
+                <button onclick="myFunction();" style="padding: 1vw 1.5vw;">Copy Email</button>
                 <script>
                     function myFunction() {
-                    var copyText = "maz62@cornell.edu";
-                    copyText.select();
-                    document.execCommand("copy");
-                    alert("Copied the text: " + copyText.value);
-                }
+                        var copyText = document.getElementById("myInput");
+                        copyText.select();
+                        document.execCommand("copy");
+                        alert("Copied the text: " + copyText.value);
+                        }   
                 </script>
+                <a href = "https://www.linkedin.com/in/michael-zhang-7100b2143/" target=_blank title="LinkedIn Profile">
+                <img src="PersonalWebsite/linkedinlogo.png" alt="LinkedIn Logo"
+                     style="margin:0px auto;display: block;width:4vw;height:4vw;margin-top: .5vw;"</img></a>
                 
      
             </div>
