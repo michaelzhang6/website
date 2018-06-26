@@ -1,14 +1,19 @@
 <!DOCTYPE html>
     <html>
         <head>
-            <title>Michael Zhang's Webpage</title>
+            <title>Michael Zhang &#124 Computer Science Student</title>
             <style>
-                a:link {color:#6BC4D6;}
+                a:link {color:#6BC4D6; text-decoration: none;}
                 a:visited {color:#6BC4D6;}
-                a:hover {color:#F2D1CA;}
+                a:hover {color:white;}
                 body {background-color: #FFFFFF;}
-                h1 {text-align:center;font-size:8.5vw;font-family: Tahoma; color:#82D0DD}
-                h2 {font-size: 3vw;font-family: Tahoma;text-align: center; color: #6B6B6B;}
+                button {background-color: white; color: #6BC4D6; text-align: center;
+                font-size: 1.5vw; border-radius: 8px; border: 1px solid #6BC4D6; transition-duration: .8s;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);}
+                button:hover {background-color: #6BC4D6; color: white; text-align: center; font-size: 1.5vw; border-radius: 8px; border: 1px solid #6BC4D6;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);}
+                h1 {text-align:center;font-size:8.5vw;font-family: Tahoma; color:#82D0DD; text-shadow: -2px -2px; }
+                h2 {font-size: 3vw;font-family: Tahoma;text-align: center; color:#6B6B6B; }
                 h3 {font-size: 1.75vw; color: #6B6B6B; font-family: Tahoma;}
                 h4 {font-size: 1.40vw; color: #6B6B6B; font-family: Tahoma;}
                 nav {font-size:3vw; font-family: Geneva; text-align: center;}
@@ -20,6 +25,7 @@
                 .exp {font-size: 1.25vw;}
                 .nav {display:inline;}
                 .nav a {text-align: center;padding: 3vw;text-decoration: none;}
+                .js-emaillink:hover {color:#F2D1CA;}
                 .row {content: "";display: table;clear: both; height:20vw;}
             </style>
             <meta name='description' content="Michael Zhang's Website">
@@ -30,18 +36,18 @@
         
         <body>
             <p style="text-align: right; font-size:1.5vw;">
-            <a href= "#Ct" title= "Contact" style="text-decoration: none;">Contact</a></p>
+            <button><a href= "#Ct" title= "Contact" style="text-decoration: none;">Contact</a></button></p>
             <div> <!--Title-->
                <h1>Michael Zhang</h1>
                <h2 style="text-align: center; font-size: 2.8vw;">Aspiring Software Developer and Data Scientist</h2>
             </div>
             
             <nav><!--Nav Bar-->
-                <ul style="list-style-type: none; margin: 0; padding: 0;">
-                    <li class="nav"><a href= "#Ov" title="Overview">Overview</a></li>
-                    <li class="nav"><a href= "#Cw" title="Coursework">Coursework</a></li>
-                    <li class="nav"><a href= "#Pr" title="Projects">Projects</a></li>
-                    <li class="nav"><a href= "#Ex" title="Experience">Experience</a></li>
+                <ul style="list-style-type: none; margin: 0;">
+                    <li class="nav"><button style ="font-size:2vw;"><a href= "#Ov" title="Overview">Overview</a></button></li>
+                    <li class="nav"><button style ="font-size:2vw;"><a href= "#Cw" title="Coursework">Coursework</a></button></li>
+                    <li class="nav"><button style ="font-size:2vw;"><a href= "#Pr" title="Projects">Projects</a></button></li>
+                    <li class="nav"><button style ="font-size:2vw;"><a href= "#Ex" title="Experience">Experience</a></button></li>
                 </ul>
             </nav>
             
@@ -68,8 +74,8 @@
                         of procedure and function calls, algorithms, exceptions, object-oriented programming, and GUIs (graphical user interfaces).
                         Weekly labs provide guided practice on the computer, with staff present to help.
                         Assignments may use graphics and GUIs to help develop fluency and understanding.</td>
-                        <td><a href="https://www.cs.cornell.edu/courses/cs1110/" target="_blank" title="https://www.cs.cornell.edu/courses/cs1110/">
-                        Course Website</a></td>
+                        <td><button><a href="https://www.cs.cornell.edu/courses/cs1110/" target="_blank" title="https://www.cs.cornell.edu/courses/cs1110/">
+                        Course Website</a></button></td>
                     </tr>
                     <tr><!-- row 2 -->
                         <td>CS2110: Object Oriented Programming and Data Structures</td>
@@ -78,8 +84,8 @@
                         graphical user interfaces, algorithm analysis (asymptotic complexity, big O notation), recursion,
                         data structures (lists, trees, stacks, queues, heaps, search trees, hash tables, graphs), graph algorithms.
                         Java is the principal programming language.</td>
-                        <td><a href="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html" target="_blank"
-                        title="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html">Course Website</a></td>
+                        <td><button><a href="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html" target="_blank"
+                        title="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html">Course Website</a></button></td>
                     </tr>
                     <tr><!-- row 3 -->
                         <td>CS2800: Discrete Structures</td>
@@ -87,16 +93,16 @@
                         sets, functions and relations, number theory, regular expressions and finite automata, graph theory, basic propositional and first-order logic.
                         Careful mathematical reasoning and argument are a major theme of the course. Students are required to write a large number of clear,
                         rigorous proofs and to work with precise definitions.</td>
-                        <td><a href="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018" target="_blank"
-                        title="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018">Course Website</a></td>
+                        <td><button><a href="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018" target="_blank"
+                        title="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018">Course Website</a></button></td>
                     </tr>
                     <tr><!-- row 4 -->
                         <td>INFO1998: Introduction to Machine Learning</td>
                         <td> This course introduces various machine learning models,
                         visualization techniques, and data manipulation strategies, with applications in the Python
                         programming language.</td>
-                        <td><a href="https://junyounglim.github.io/machine-learning-course/" target="_blank"
-                        title="https://junyounglim.github.io/machine-learning-course/">Course Website</a></td>
+                        <td><button><a href="https://junyounglim.github.io/machine-learning-course/" target="_blank"
+                        title="https://junyounglim.github.io/machine-learning-course/">Course Website</a></button></td>
                     </tr>
                 </table>
             </div>
@@ -176,13 +182,13 @@
                         Exploring machine learning techniques used in Python.
                     </p>
                 </div>
-                <p style="text-align:center;font-size: 1.75vw;">Summary: <a href="PersonalWebsite/CSResume.pdf" target="_blank" title="Michael's Resume">Re&#769sume&#769</a></p>
+                <p style="text-align:center;font-size: 1.5vw;">Summary: <button><a href="PersonalWebsite/CSResume.pdf" target="_blank" title="Michael's Resume">Re&#769sume&#769</a></button></p>
             </div>
             
             <div style="text-align: center;"><!-- Contact -->
                 <h2 id = "Ct">Contact</h2>
-                <p>Email me at <a class="js-emaillink" href="mailto:maz62@cornell.edu">maz62@cornell.edu</a>
-                <button class="js-emailcopybtn">Copy Email</button></p>
+                <p>Email me at <a class="js-emaillink" href="mailto:maz62@cornell.edu" style="text-decoration: none;">maz62@cornell.edu</a>
+                <button class="js-emailcopybtn" style="font-size: 1vw;">Copy Email</button></p>
                 <script>
                     var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
                     copyEmailBtn.addEventListener('click', function(event) {  
@@ -211,5 +217,6 @@
                 
      
             </div>
+            <p style="text-align: center; font-size: 1vw;">Copyright &#169 2018 Michael Zhang </p>
         </body>
     </html>
