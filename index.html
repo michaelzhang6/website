@@ -4,19 +4,19 @@
             <title>Michael Zhang's Webpage</title>
             <style>
                 a:link {color:#6BC4D6;}
-                a:visited {color:#f26246;}
-                a:hover {color:#EF9A45;}
-                body {background-color: #EFEFEF;}
-                h1 {text-align:center;font-size:8.5vw;font-family: Lucida Sans Unicode; color:#FF3B3F}
-                h2 {font-size: 3vw;font-family: arial;text-align: center;}
-                h3 {font-size: 1.75vw;}
-                h4 {font-size: 1.40vw;}
-                nav {font-size:3vw; font-family: monospace; text-align: center;}
-                p {font-size:1.5vw; font-family: arial;}
-                table#t01 {border-spacing: 1vw; border: .5vw solid black;}
+                a:visited {color:#6BC4D6;}
+                a:hover {color:#F2D1CA;}
+                body {background-color: #FFFFFF;}
+                h1 {text-align:center;font-size:8.5vw;font-family: Tahoma; color:#82D0DD}
+                h2 {font-size: 3vw;font-family: Tahoma;text-align: center; color: #6B6B6B;}
+                h3 {font-size: 1.75vw; color: #6B6B6B; font-family: Tahoma;}
+                h4 {font-size: 1.40vw; color: #6B6B6B; font-family: Tahoma;}
+                nav {font-size:3vw; font-family: Geneva; text-align: center;}
+                p {font-size:1.5vw; font-family: Geneva; color: #6B6B6B; }
+                table#t01 {border-spacing: 1.5vw; border: 1vw solid #6BC4D6; border-radius:10px; }
                 th {text-align: left; width: 10vw;}
                 
-                .column {float: left;width: 32%; font-size: 1.25vw;}
+                .column {float: left;width: 32%; font-size: 1.25vw; color: #6B6B6B;}
                 .exp {font-size: 1.25vw;}
                 .nav {display:inline;}
                 .nav a {text-align: center;padding: 3vw;text-decoration: none;}
@@ -29,14 +29,15 @@
         </head>
         
         <body>
-            <p style="text-align: right; font-size:1.5vw;"><a href= "#Ct" title= "Contact">Contact</a></p>
+            <p style="text-align: right; font-size:1.5vw;">
+            <a href= "#Ct" title= "Contact" style="text-decoration: none;">Contact</a></p>
             <div> <!--Title-->
                <h1>Michael Zhang</h1>
                <h2 style="text-align: center; font-size: 2.8vw;">Aspiring Software Developer and Data Scientist</h2>
             </div>
             
             <nav><!--Nav Bar-->
-                <ul style="list-style-type: none; margin: 0; padding: 0; background-color: #EFEFEF;">
+                <ul style="list-style-type: none; margin: 0; padding: 0;">
                     <li class="nav"><a href= "#Ov" title="Overview">Overview</a></li>
                     <li class="nav"><a href= "#Cw" title="Coursework">Coursework</a></li>
                     <li class="nav"><a href= "#Pr" title="Projects">Projects</a></li>
@@ -53,7 +54,7 @@
             
             <div><!-- Coursework-->
                 <h2 id="Cw">Coursework</h2>
-                <table id ="t01" style="width:100%; font-size:1.5vw; margin:0px auto;font-family: arial;">
+                <table id ="t01" style="width:100%; font-size:1.5vw; margin:0px auto;font-family: arial; color: #6B6B6B; font-family: Tahoma;">
                     <tr><!-- headers -->
                         <th>Course Name</th>
                         <th>Course Description</th>
@@ -180,15 +181,29 @@
             
             <div style="text-align: center;"><!-- Contact -->
                 <h2 id = "Ct">Contact</h2>
-                <input type="text" value="maz62@cornell.edu" id="myInput" style="width: 0%">
-                <button onclick="myFunction();" style="padding: 1vw 1.5vw;">Copy Email</button>
+                <p>Email me at <a class="js-emaillink" href="mailto:maz62@cornell.edu">maz62@cornell.edu</a>
+                <button class="js-emailcopybtn">Copy Email</button></p>
                 <script>
-                    function myFunction() {
-                        var copyText = document.getElementById("myInput");
-                        copyText.select();
-                        document.execCommand("copy");
-                        alert("Copied the text: " + copyText.value);
-                        }   
+                    var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
+                    copyEmailBtn.addEventListener('click', function(event) {  
+                    // Select the email link anchor text  
+                    var emailLink = document.querySelector('.js-emaillink');  
+                    var range = document.createRange();  
+                    range.selectNode(emailLink);  
+                    window.getSelection().addRange(range);  
+
+                    try {  
+                      // Now that we've selected the anchor text, execute the copy command  
+                    var successful = document.execCommand('copy');  
+                    var msg = successful ? 'successful' : 'unsuccessful';  
+                    console.log('Copy email command was ' + msg);  }
+                    catch(err) {  
+                    console.log('Oops, unable to copy');  }  
+
+                    // Remove the selections - NOTE: Should use
+                    // removeRange(range) when it is supported  
+                    window.getSelection().removeAllRanges();  
+                    });   
                 </script>
                 <a href = "https://www.linkedin.com/in/michael-zhang-7100b2143/" target=_blank title="LinkedIn Profile">
                 <img src="PersonalWebsite/linkedinlogo.png" alt="LinkedIn Logo"
