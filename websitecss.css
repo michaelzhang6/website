@@ -1,0 +1,43 @@
+                /*links*/
+                a:link {color:#6BC4D6; text-decoration: none;}
+                a:visited {color:#6BC4D6;}
+                a:hover {color:white;}
+                
+                body {background-color: #FFFFFF;}
+                
+                /*buttons*/
+                button {background-color: white; color: #6BC4D6; text-align: center;
+                font-size: 1.5vw; border-radius: 8px; border: 1px solid #6BC4D6; transition-duration: .8s;
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19);}
+                button:hover {background-color: #6BC4D6; color: white; text-align: center; font-size: 1.5vw; border-radius: 8px; border: 1px solid #6BC4D6;
+                box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19);}
+                
+                
+                /*headers*/
+                h1 {text-align:center;font-size:8.5vw;font-family: Tahoma; color:#82D0DD; text-shadow: -1px -1px #2D2D2D; }
+                h2 {font-size: 3vw;font-family: Tahoma;text-align: center; color:#6B6B6B; }
+                h3 {font-size: 1.75vw; color: #6B6B6B; font-family: Tahoma;}
+                h4 {font-size: 1.40vw; color: #6B6B6B; font-family: Tahoma;}
+                
+                /*misc*/
+                nav {font-size:3vw; font-family: Geneva; text-align: center;}
+                p {font-size:1.5vw; font-family: Geneva; color: #6B6B6B;}
+                table#t01 {border-spacing: 1.5vw; border: 1vw solid #6BC4D6; border-radius:10px;
+                box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 2px 4px 0 rgba(0,0,0,0.19)}
+                th {text-align: left; width: 10vw;}
+                
+                /*classes*/
+                .column {float: left;width: 32%; font-size: 1.25vw; color: #6B6B6B;}
+                .exp {font-size: 1.25vw;}
+                .js-emaillink:hover {color:#F2D1CA;}
+                .nav {display:inline;}
+                .nav a {text-align: center;padding: 3vw;text-decoration: none;}
+                .prspotify {height: 22vw; width: 32vw;text-align: right;background-color: black; color: white; font-family: Tahoma;}
+                .prspotify:hover {height: 22vw; width: 32vw; text-align: right;background-color: white; color: black; font-family: Tahoma;}
+                .prwebsite {height: 22vw; width: 32vw;text-align: right;background-color: #6BC4D6; color: white;}
+                .prwebsite:hover {height: 22vw; width: 32vw;text-align: right;background-color: #F2D1CA; color: white;}
+                .prapp {height: 22vw; width: 32vw;text-align: right;background-color: #F7B733; color: white;}
+                .prapp:hover {height: 22vw; width: 32vw;text-align: right;background-color: #FC4A1A; color: white;}
+                .prdiv {height:10vw; width:15vw; display: inline;}
+                .row {content: "";display: table;clear: both; height:25vw;}
+                

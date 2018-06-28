@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Michael Zhang &#124 Projects: Website</title>
+            <link rel="stylesheet" href="../websitecss.css">
+            <meta name='description' content="Michael Zhang's Website">
+            <meta name='keywords' content="Cornell, CS, Developer, Software, Data, Science">
+            <meta name='author' content='Michael Zhang'>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        </head>
+        <body>
+            <button><a href="../index.html#Pr">Back</a></button>
+            <p style="text-align: right; font-size:1.5vw; display: inline;">
+            <a href= "#Ct" title= "Contact" style="text-decoration: none;"><button>Contact</button></a></p>
+            <h1>WEBPAGE UNDER CONSTRUCTION</h1>
+            <hr></hr>
+            
+            <div style="text-align: center;"><!-- Contact -->
+                <h2 id = "Ct">Contact</h2>
+                <p>Email me at <a class="js-emaillink" href="mailto:maz62@cornell.edu" style="text-decoration: none;">maz62@cornell.edu</a>
+                <button class="js-emailcopybtn" style="font-size: 1vw;">Copy Email</button></p>
+                <script>
+                    var copyEmailBtn = document.querySelector('.js-emailcopybtn');  
+                    copyEmailBtn.addEventListener('click', function(event) {  
+                    // Select the email link anchor text  
+                    var emailLink = document.querySelector('.js-emaillink');  
+                    var range = document.createRange();  
+                    range.selectNode(emailLink);  
+                    window.getSelection().addRange(range);  
+
+                    try {  
+                      // Now that we've selected the anchor text, execute the copy command  
+                    var successful = document.execCommand('copy');  
+                    var msg = successful ? 'successful' : 'unsuccessful';  
+                    console.log('Copy email command was ' + msg);  }
+                    catch(err) {  
+                    console.log('Oops, unable to copy');  }  
+
+                    // Remove the selections - NOTE: Should use
+                    // removeRange(range) when it is supported  
+                    window.getSelection().removeAllRanges();  
+                    });   
+                </script>
+                <a href = "https://www.linkedin.com/in/michael-zhang-7100b2143/" target=_blank title="LinkedIn Profile">
+                <img src="linkedinlogo.png" alt="LinkedIn Logo"
+                     style="margin:0px auto;display: block;width:4vw;height:4vw;margin-top: .5vw;"</img></a>
+                
+     
+            </div>
+            <p style="text-align: center; font-size: 1vw;">Copyright &#169 2018 Michael Zhang </p>
+        </body>
+    </html>

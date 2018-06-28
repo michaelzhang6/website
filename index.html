@@ -2,32 +2,7 @@
     <html>
         <head>
             <title>Michael Zhang &#124 Computer Science Student</title>
-            <style>
-                a:link {color:#6BC4D6; text-decoration: none;}
-                a:visited {color:#6BC4D6;}
-                a:hover {color:white;}
-                body {background-color: #FFFFFF;}
-                button {background-color: white; color: #6BC4D6; text-align: center;
-                font-size: 1.5vw; border-radius: 8px; border: 1px solid #6BC4D6; transition-duration: .8s;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);}
-                button:hover {background-color: #6BC4D6; color: white; text-align: center; font-size: 1.5vw; border-radius: 8px; border: 1px solid #6BC4D6;
-                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);}
-                h1 {text-align:center;font-size:8.5vw;font-family: Tahoma; color:#82D0DD; text-shadow: -2px -2px; }
-                h2 {font-size: 3vw;font-family: Tahoma;text-align: center; color:#6B6B6B; }
-                h3 {font-size: 1.75vw; color: #6B6B6B; font-family: Tahoma;}
-                h4 {font-size: 1.40vw; color: #6B6B6B; font-family: Tahoma;}
-                nav {font-size:3vw; font-family: Geneva; text-align: center;}
-                p {font-size:1.5vw; font-family: Geneva; color: #6B6B6B; }
-                table#t01 {border-spacing: 1.5vw; border: 1vw solid #6BC4D6; border-radius:10px; }
-                th {text-align: left; width: 10vw;}
-                
-                .column {float: left;width: 32%; font-size: 1.25vw; color: #6B6B6B;}
-                .exp {font-size: 1.25vw;}
-                .nav {display:inline;}
-                .nav a {text-align: center;padding: 3vw;text-decoration: none;}
-                .js-emaillink:hover {color:#F2D1CA;}
-                .row {content: "";display: table;clear: both; height:20vw;}
-            </style>
+            <link rel="stylesheet" href="websitecss.css">
             <meta name='description' content="Michael Zhang's Website">
             <meta name='keywords' content="Cornell, CS, Developer, Software, Data, Science">
             <meta name='author' content='Michael Zhang'>
@@ -36,7 +11,7 @@
         
         <body>
             <p style="text-align: right; font-size:1.5vw;">
-            <button><a href= "#Ct" title= "Contact" style="text-decoration: none;">Contact</a></button></p>
+            <a href= "#Ct" title= "Contact" style="text-decoration: none;"><button>Contact</button></a></p>
             <div> <!--Title-->
                <h1>Michael Zhang</h1>
                <h2 style="text-align: center; font-size: 2.8vw;">Aspiring Software Developer and Data Scientist</h2>
@@ -44,10 +19,10 @@
             
             <nav><!--Nav Bar-->
                 <ul style="list-style-type: none; margin: 0;">
-                    <li class="nav"><button style ="font-size:2vw;"><a href= "#Ov" title="Overview">Overview</a></button></li>
-                    <li class="nav"><button style ="font-size:2vw;"><a href= "#Cw" title="Coursework">Coursework</a></button></li>
-                    <li class="nav"><button style ="font-size:2vw;"><a href= "#Pr" title="Projects">Projects</a></button></li>
-                    <li class="nav"><button style ="font-size:2vw;"><a href= "#Ex" title="Experience">Experience</a></button></li>
+                    <li class="nav"><a href= "#Ov" title="Overview"><button style ="font-size:1.75vw; width: 14vw;">Overview</button></a></li>
+                    <li class="nav"><a href= "#Cw" title="Coursework"><button style ="font-size:1.75vw; width: 14vw;">Coursework</button></a></li>
+                    <li class="nav"><a href= "#Pr" title="Projects"><button style ="font-size:1.75vw; width: 14vw;">Projects</button></a></li>
+                    <li class="nav"><a href= "#Ex" title="Experience"><button style ="font-size:1.75vw; width: 14vw;">Experience</button></a></li>
                 </ul>
             </nav>
             
@@ -56,6 +31,7 @@
                 <p style='text-align: center;'>Hello! I'm Michael and I'm a sophomore studying computer science at Cornell University.
                 I'm interested in web development, software development, and data science. I'm highly motivated and willing to learn.</p>
                 <img src="PersonalWebsite/headshot.jpeg" alt="Headshot" title= "Headshot" style="width:15vw;height:15.84vw;margin:0px auto;display: block;"></img>
+                <p style="text-align:center;font-size: 1.5vw;"><a href="PersonalWebsite/CSResume.pdf" target="_blank" title="Michael's Resume"><button>Re&#769sume&#769</button></a></p>
             </div>
             
             <div><!-- Coursework-->
@@ -74,8 +50,8 @@
                         of procedure and function calls, algorithms, exceptions, object-oriented programming, and GUIs (graphical user interfaces).
                         Weekly labs provide guided practice on the computer, with staff present to help.
                         Assignments may use graphics and GUIs to help develop fluency and understanding.</td>
-                        <td><button><a href="https://www.cs.cornell.edu/courses/cs1110/" target="_blank" title="https://www.cs.cornell.edu/courses/cs1110/">
-                        Course Website</a></button></td>
+                        <td><a href="https://www.cs.cornell.edu/courses/cs1110/" target="_blank" title="https://www.cs.cornell.edu/courses/cs1110/"><button>
+                        Course Website</button></a></td>
                     </tr>
                     <tr><!-- row 2 -->
                         <td>CS2110: Object Oriented Programming and Data Structures</td>
@@ -84,8 +60,8 @@
                         graphical user interfaces, algorithm analysis (asymptotic complexity, big O notation), recursion,
                         data structures (lists, trees, stacks, queues, heaps, search trees, hash tables, graphs), graph algorithms.
                         Java is the principal programming language.</td>
-                        <td><button><a href="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html" target="_blank"
-                        title="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html">Course Website</a></button></td>
+                        <td><a href="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html" target="_blank"
+                        title="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html"><button>Course Website</button></a></td>
                     </tr>
                     <tr><!-- row 3 -->
                         <td>CS2800: Discrete Structures</td>
@@ -93,16 +69,16 @@
                         sets, functions and relations, number theory, regular expressions and finite automata, graph theory, basic propositional and first-order logic.
                         Careful mathematical reasoning and argument are a major theme of the course. Students are required to write a large number of clear,
                         rigorous proofs and to work with precise definitions.</td>
-                        <td><button><a href="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018" target="_blank"
-                        title="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018">Course Website</a></button></td>
+                        <td><a href="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018" target="_blank"
+                        title="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018"><button>Course Website</button></a></td>
                     </tr>
                     <tr><!-- row 4 -->
                         <td>INFO1998: Introduction to Machine Learning</td>
                         <td> This course introduces various machine learning models,
                         visualization techniques, and data manipulation strategies, with applications in the Python
                         programming language.</td>
-                        <td><button><a href="https://junyounglim.github.io/machine-learning-course/" target="_blank"
-                        title="https://junyounglim.github.io/machine-learning-course/">Course Website</a></button></td>
+                        <td><a href="https://junyounglim.github.io/machine-learning-course/" target="_blank"
+                        title="https://junyounglim.github.io/machine-learning-course/"><button>Course Website</button></a></td>
                     </tr>
                 </table>
             </div>
@@ -111,12 +87,17 @@
                 <h2 id="Pr">Projects</h2>
                     <div class="row">
                         <!-- Website -->
-                        <div class= "column"><h3 style="text-align: center;">This Website!</h3>I taught myself HTML, CSS, and JavaScript in order to make this website.</div>
+                        <div class= "column" style="padding-right: 1vw;"><h3 style="text-align: center;">This Website!</h3><a href="PersonalWebsite/websiteinfo.html">
+                        <button class="prwebsite"><div class="prdiv">
+                        I taught myself HTML, CSS, and JavaScript in order to make this website.</div></button></a></div>
                         <!-- Spotify -->
-                        <div class= "column"><h3 style="text-align: center;">Spotify New Music Notifications</h3>Using JavaScript, I created a Chrome extension that notifies the user when
-                    the artists they follow on Spotify release new music.</div>
+                        <div class= "column" style="padding-right: 1vw;"><h3 style="text-align: center;">Spotify New Music Notifications</h3><a href="PersonalWebsite/SpotifyNotification.html">
+                        <button class="prspotify"><div class="prdiv"><img src="PersonalWebsite/spotifylogo.png" alt="spotify logo" style="height: 10vw; width: 10vw; margin: auto;"></div>
+                        <div class="prdiv">Using JavaScript, I created a Chrome extension that notifies the user when
+                    the artists they follow on Spotify release new music.</div></button></a></div>
                         <!-- Swift -->
-                        <div class= "column"><h3 style="text-align: center;">iPhone App</h3> Using Swift, I created an iPhone app.</div>
+                        <div class= "column"><h3 style="text-align: center;">iPhone App</h3> <a href="PersonalWebsite/websiteinfo.html">
+                        <button class="prapp"><div class="prdiv">Using Swift, I created an iPhone app.</div></button></a></div>
                     </div>
             </div>
             
@@ -182,7 +163,8 @@
                         Exploring machine learning techniques used in Python.
                     </p>
                 </div>
-                <p style="text-align:center;font-size: 1.5vw;">Summary: <button><a href="PersonalWebsite/CSResume.pdf" target="_blank" title="Michael's Resume">Re&#769sume&#769</a></button></p>
+                <br></br>
+                <hr></hr>
             </div>
             
             <div style="text-align: center;"><!-- Contact -->
