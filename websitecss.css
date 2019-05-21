@@ -32,12 +32,12 @@
                 .js-emaillink:hover {color:#F2D1CA;}
                 .nav {display:inline;}
                 .nav a {text-align: center;padding: 3vw;text-decoration: none;}
-                .prspotify {height: 22vw; width: 32vw;text-align: right;background-color: black; color: white; font-family: Tahoma;}
-                .prspotify:hover {height: 22vw; width: 32vw; text-align: right;background-color: white; color: black; font-family: Tahoma;}
+                .prAI {height: 22vw; width: 32vw;text-align: right;background-color: black; color: white; font-family: Tahoma;}
+                .prAI:hover {height: 22vw; width: 32vw; text-align: right;background-color: white; color: black; font-family: Tahoma;}
                 .prwebsite {height: 22vw; width: 32vw;text-align: right;background-color: #6BC4D6; color: white;}
                 .prwebsite:hover {height: 22vw; width: 32vw;text-align: right;background-color: #F2D1CA; color: white;}
-                .prapp {height: 22vw; width: 32vw;text-align: right;background-color: #F7B733; color: white;}
-                .prapp:hover {height: 22vw; width: 32vw;text-align: right;background-color: #FC4A1A; color: white;}
+                .prProcessor {height: 22vw; width: 32vw;text-align: right;background-color: rgb(20, 187, 48); color: white;}
+                .prProcessor:hover {height: 22vw; width: 32vw;text-align: right;background-color: white; color: rgb(20, 187, 48);}
                 .prdiv {height:10vw; width:15vw; display: inline;}
                 .row {content: "";display: table;clear: both; height:25vw;}
                 

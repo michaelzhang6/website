@@ -1,0 +1,10 @@
+- add 4700, 3410
+- click to expand for coursework
+- project pages
+  - riscv processor (look at project description and add screenshots)
+  - AI prac (use project report and add pics)
+- write more about Budapest
+- click to expand for jobs
+- Raytheon job description
+- update ACSU description
+- update all descriptions to match resume
