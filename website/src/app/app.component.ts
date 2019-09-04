@@ -20,7 +20,7 @@ export class AppComponent {
     this.navPos = this.navElement.nativeElement.offsetTop
   }
 
-  @HostListener('window:scroll', ['$event'])
+  @HostListener('window:scroll', [])
   handleScroll() {
     const windowScroll = window.pageYOffset;
     if (windowScroll >= this.navPos) {
