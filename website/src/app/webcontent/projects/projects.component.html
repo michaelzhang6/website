@@ -4,15 +4,14 @@
     <div id="container">
         <div (click)="openProject(0)">
             <img style="width:275px;height:252px;" [ngClass]="{'notSelected': (lock && !websiteInfo)}"
-                src="./../../../assets/WebsiteLogo.jpg">
+                src="assets/WebsiteLogo.jpg">
         </div>
         <div (click)="openProject(1)">
             <img style="height:275px;width:368.9px" [ngClass]="{'notSelected': (lock && !aiProject)}"
-                src="./../../../assets/marth.gif">
+                src="assets/marth.gif">
         </div>
         <div (click)="openProject(2)" style="border:1px solid black">
-            <img style="height:275px;width:275px" [ngClass]="{'notSelected': (lock && !riscv)}"
-                src="./../../../assets/riscv.jpg">
+            <img style="height:275px;width:275px" [ngClass]="{'notSelected': (lock && !riscv)}" src="assets/riscv.jpg">
         </div>
     </div>
     <app-aiproject *ngIf="aiProject"></app-aiproject>
