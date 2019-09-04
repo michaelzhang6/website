@@ -1,0 +1,34 @@
+<div style="text-align: center;">
+    <!-- Contact -->
+    <h2 id="Ct">Contact</h2>
+    <p>Email me at <a class="js-emaillink" href="mailto:maz62@cornell.edu"
+            style="text-decoration: none;">maz62@cornell.edu</a>
+        <button class="js-emailcopybtn" style="font-size: 1vw;margin-left:.4em">Copy Email</button></p>
+    <script>
+        var copyEmailBtn = document.querySelector('.js-emailcopybtn');
+        copyEmailBtn.addEventListener('click', function (event) {
+            // Select the email link anchor text  
+            var emailLink = document.querySelector('.js-emaillink');
+            var range = document.createRange();
+            range.selectNode(emailLink);
+            window.getSelection().addRange(range);
+
+            try {
+                // Now that we've selected the anchor text, execute the copy command  
+                var successful = document.execCommand('copy');
+                var msg = successful ? 'successful' : 'unsuccessful';
+                console.log('Copy email command was ' + msg);
+            }
+            catch (err) {
+                console.log('Oops, unable to copy');
+            }
+
+            // Remove the selections - NOTE: Should use
+            // removeRange(range) when it is supported  
+            window.getSelection().removeAllRanges();
+        });   
+    </script>
+    <a href="https://www.linkedin.com/in/michael-zhang-7100b2143/" target=_blank title="LinkedIn Profile">
+        <img src="./../../assets/linkedinlogo.png" alt="LinkedIn Logo"
+            style="margin:0px auto;display: block;width:4vw;height:4vw;margin-top: .5vw;"> </a>
+</div>

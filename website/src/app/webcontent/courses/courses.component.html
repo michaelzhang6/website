@@ -1,0 +1,132 @@
+<div style="background-color:#eee; padding-bottom:5em">
+    <!-- Coursework-->
+    <h2 id="Cw" style="padding-top:1.5em">Coursework</h2>
+    <table id="t01"
+        style="width:100%; font-size:1.5vw; margin:0px auto;font-family: arial; color: #6B6B6B; font-family: 'Oswald', sans-serif;">
+        <tr>
+            <!-- headers -->
+            <th>Course Name</th>
+            <th>Course Description</th>
+            <th>Learn More</th>
+        </tr>
+        <tr>
+            <td>CS4700: Foundations of Artificial Intelligence</td>
+            <td>Challenging introduction to the major subareas and current
+                research directions in artificial intelligence. Topics include
+                knowledge representation, heuristic search, problem solving,
+                natural-language processing, game-playing, logic and deduction,
+                planning, and machine learning.
+            </td>
+            <td><a href="http://www.cs.cornell.edu/courses/cs4700/2019sp/" target="_blank"
+                    title="http://www.cs.cornell.edu/courses/cs4700/2019sp/">
+                    <button>Course Website</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td>CS3410: Systems Programming</td>
+            <td> Introduction to computer organization, systems programming and
+                the hardware/software interface. Topics include instruction sets,
+                computer arithmetic, datapath design, data formats, addressing
+                modes, memory hierarchies including caches and virtual memory,
+                I/O devices, bus-based I/O systems, and multicore architectures.
+                Students learn assembly language programming and design a pipelined RISC processor</td>
+            <td><a href="http://www.cs.cornell.edu/courses/cs3410/2019sp/" target="_blank"
+                    title="http://www.cs.cornell.edu/courses/cs3410/2019sp/"><button>Course Website</button></a>
+            </td>
+        </tr>
+        <tr>
+            <td>CS3110: Data Structures and Functional Programming</td>
+            <td>This course will give you the opportunity to become a better programmer.
+                First, you will learn a functional programming language, OCaml. Second, we will explore questions
+                that arise in the fields of
+                software engineering, programming methodology, and programming language theory.
+                Third, and most importantly, this course will give you the opportunity to read and write a lot of
+                code,
+                and to strive for excellence in your own programming.</td>
+            <td><a href="http://www.cs.cornell.edu/courses/cs3110/2018fa/" target="_blank"
+                    title="http://www.cs.cornell.edu/courses/cs3110/2018fa/"><button>Course Website</button></a>
+            </td>
+        </tr>
+        <tr *ngIf="moreCourses">
+            <td>CS2800: Discrete Structures</td>
+            <td>This course covers the mathematical concepts that underlie computer science, including: induction,
+                combinatorics, basic probability,
+                sets, functions and relations, number theory, regular expressions and finite automata, graph theory,
+                basic propositional and first-order logic.
+                Careful mathematical reasoning and argument are a major theme of the course. Students are required
+                to write a large number of clear,
+                rigorous proofs and to work with precise definitions.</td>
+            <td><a href="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018" target="_blank"
+                    title="https://courses.cs.cornell.edu/cs2800/wiki/index.php/CS_2800_Spring_2018"><button>Course
+                        Website</button></a></td>
+        </tr>
+        <tr *ngIf="moreCourses">
+            <td>CS2110: Object Oriented Programming and Data Structures</td>
+            <td>Intermediate programming in a high-level language and introduction to computer science.
+                Topics include program structure and organization, object-oriented programming (classes, objects,
+                types, sub-typing),
+                graphical user interfaces, algorithm analysis (asymptotic complexity, big O notation), recursion,
+                data structures (lists, trees, stacks, queues, heaps, search trees, hash tables, graphs), graph
+                algorithms.
+                Java is the principal programming language.</td>
+            <td><a href="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html" target="_blank"
+                    title="http://www.cs.cornell.edu/courses/cs2110/2018sp/index.html"><button>Course
+                        Website</button></a></td>
+        </tr>
+        <tr *ngIf="moreCourses">
+            <td>INFO1998: Introduction to Machine Learning</td>
+            <td> This course introduces various machine learning models,
+                visualization techniques, and data manipulation strategies, with applications in the Python
+                programming language.</td>
+            <td><a href="https://junyounglim.github.io/machine-learning-course/" target="_blank"
+                    title="https://junyounglim.github.io/machine-learning-course/"><button>Course
+                        Website</button></a></td>
+        </tr>
+        <tr *ngIf="moreCourses">
+            <td>CS1998: Intro to iOS App Development</td>
+            <td>This course starts with the basics of Xcode and how to make a simple app, and works its way towards
+                more advanced techniques
+                as the course progresses. By the end of the course, you should have all the experience necessary to
+                create your own app and distribute
+                it on the iOS App Store</td>
+            <td><a href="https://www.cornellappdev.com/intro-to-ios-development" target="_blank"
+                    title="https://www.cornellappdev.com/intro-to-ios-development"><button>Course
+                        Website</button></a></td>
+        </tr>
+        <tr *ngIf="moreCourses">
+            <td>CS1110: Introduction to Programming</td>
+            <td>Programming and problem solving using Python.
+                Emphasizes principles of software development, style, and testing.
+                Topics include procedures and functions, iteration, recursion, arrays and vectors, strings, an
+                operational model
+                of procedure and function calls, algorithms, exceptions, object-oriented programming, and GUIs
+                (graphical user interfaces).
+                Weekly labs provide guided practice on the computer, with staff present to help.
+                Assignments may use graphics and GUIs to help develop fluency and understanding.</td>
+            <td><a href="https://www.cs.cornell.edu/courses/cs1110/" target="_blank"
+                    title="https://www.cs.cornell.edu/courses/cs1110/"><button>
+                        Course Website</button></a></td>
+        </tr>
+        <tr *ngIf="moreCourses">
+            <td></td>
+            <td style="text-align:center">
+                Math Courses: Calculus II, Linear Algebra, Probability
+            </td>
+        </tr>
+        <!-- <tr>
+                    <td>CS4320: Introduction to Database Systems</td>
+                    <td>CS4320/CS5320 is an introduction to relational database systems, NoSQL and NewSQL systems,
+                    and other tools for large-scale data analysis. Topics covered include the relational model, SQL,
+                    query processing and optimization, transactions, recovery, NoSQL and NewSQL systems, database design, Map Reduce, and Spark.</td>
+                    <td><a href="http://www.cs.cornell.edu/courses/cs4320/2018fa/" target="_blank"
+                    title="http://www.cs.cornell.edu/courses/cs4320/2018fa/"><button>Course Website</button></a></td>
+                </tr> -->
+        <button *ngIf="!moreCourses" (click)="moreCourses = true">See More</button>
+        <button *ngIf="moreCourses" (click)="moreCourses = false">See Less</button>
+    </table>
+    <h3>Fall 2019: Study Abroad at AIT Budapest
+        <button *ngIf="!budapest" (click)="budapest=true">Learn More</button>
+        <button *ngIf="budapest" (click)="budapest=false">Close</button>
+    </h3>
+    <app-budapest *ngIf="budapest"></app-budapest>
+</div>

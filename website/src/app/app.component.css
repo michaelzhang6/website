@@ -1,0 +1,36 @@
+nav {
+    background-color: #6BC4D6;
+}
+nav a {
+    color: white;
+    padding: 1em;
+    font-size: .9em
+}
+nav a:hover {
+    color: #6B6B6B;
+}
+.sticky {
+    position:fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.content {
+    padding: 16px
+}
+
+h1 {
+    font-size: 5vw
+}
+h2 {
+    font-size: 2.5vw
+}
+:host {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+  }
