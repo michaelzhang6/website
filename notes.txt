@@ -1,0 +1,5 @@
+Build to /docs in git repo root
+
+ng build --prod --base-href https://michaelzhang6.github.io/website/
+
+ngh
