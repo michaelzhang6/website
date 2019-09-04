@@ -1,5 +1,2 @@
-- project pages
-  - riscv processor (look at project description and add screenshots)
-  - AI prac (use project report and add pics)
-- add icons for skills used
+- fix scaling issues
 
