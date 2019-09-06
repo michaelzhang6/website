@@ -2,17 +2,17 @@ div#container {
     display:flex;
     flex-direction:row;
     justify-content:center;
-    padding:2em
+    padding:2em;
 }
 div#container div{
     border-radius:50%;
     overflow:hidden;
-    width:275px;
-    height:275px;
+    width:18vw;
+    height:18vw;
     display:flex;
     align-items:center;
     justify-content:center;
-    margin:2em
+    margin:2vw;
 }
 .notSelected {
     opacity: 0.5

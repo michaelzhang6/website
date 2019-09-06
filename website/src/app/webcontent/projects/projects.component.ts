@@ -7,12 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  aiProject = false;
-  websiteInfo = false;
-  riscv = false;
-
-  // one project can have lock
-  lock = false;
+  // queue for project selection (only one at any given time)
+  projSelected = new Array();
 
   constructor() { }
 
@@ -20,21 +16,27 @@ export class ProjectsComponent implements OnInit {
   }
 
   /**
-   * Returns true if project can be opened, false otherwise. If project can be
-   * can be opened, grabs lock.
+   * Opens a project and removes the previously selected one
+   * 
+   * project - number representing the project
+   * 
+   * mapping is:
+   * 0 - website
+   * 1 - ai
+   * 2 - riscv
    */
   openProject(project: number) {
-    if (!this.lock) {
-      this.lock = true;
-      if (project == 0) {
-        this.websiteInfo = true;
-      }
-      if (project == 1) {
-        this.aiProject = true;
-      }
-      if (project == 2) {
-        this.riscv = true;
+    if (this.projSelected.length == 0) {
+      this.projSelected.push(project)
+    } else {
+      // non empty 
+      if (this.projSelected[0] == project) {
+        return;
+      } else {
+        this.projSelected.pop();
+        this.projSelected.push(project);
       }
     }
+
   }
 }

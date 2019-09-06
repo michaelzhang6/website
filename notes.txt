@@ -1,4 +1,4 @@
-Build to /docs in git repo root
+Using ghpages
 
 ng build --prod --base-href https://michaelzhang6.github.io/website/
 

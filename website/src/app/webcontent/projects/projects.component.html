@@ -3,20 +3,23 @@
     <h2 id="Pr" style="padding-top:1.5em">Projects</h2>
     <div id="container">
         <div (click)="openProject(0)">
-            <img style="width:275px;height:252px;" [ngClass]="{'notSelected': (lock && !websiteInfo)}"
+            <img style="width:18vw;height:17vw;"
+                [ngClass]="{'notSelected': (projSelected[0] != undefined && projSelected[0] != 0)}"
                 src="assets/WebsiteLogo.jpg">
         </div>
         <div (click)="openProject(1)">
-            <img style="height:275px;width:368.9px" [ngClass]="{'notSelected': (lock && !aiProject)}"
+            <img style="height:18vw;width:21vw"
+                [ngClass]="{'notSelected': (projSelected[0] != undefined && projSelected[0] != 1)}"
                 src="assets/marth.gif">
         </div>
         <div (click)="openProject(2)" style="border:1px solid black">
-            <img style="height:275px;width:275px" [ngClass]="{'notSelected': (lock && !riscv)}" src="assets/riscv.jpg">
+            <img style="height:18vw;width:18vw"
+                [ngClass]="{'notSelected': (projSelected[0] != undefined && projSelected[0] != 2)}"
+                src="assets/riscv.jpg">
         </div>
     </div>
-    <app-aiproject *ngIf="aiProject"></app-aiproject>
-    <app-websiteinfo *ngIf="websiteInfo"></app-websiteinfo>
-    <app-riscv *ngIf="riscv"></app-riscv>
-    <button *ngIf="aiProject || websiteInfo || riscv"
-        (click)="aiProject=false; websiteInfo=false; riscv=false; lock=false">Close</button>
+    <app-websiteinfo *ngIf="projSelected[0] != undefined && projSelected[0] == 0"></app-websiteinfo>
+    <app-aiproject *ngIf="projSelected[0] != undefined && projSelected[0] == 1"></app-aiproject>
+    <app-riscv *ngIf="projSelected[0] != undefined && projSelected[0] == 2"></app-riscv>
+    <button *ngIf="projSelected[0] != undefined" (click)="projSelected.pop()">Close</button>
 </div>
