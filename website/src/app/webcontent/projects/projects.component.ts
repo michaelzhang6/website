@@ -26,13 +26,16 @@ export class ProjectsComponent implements OnInit {
    * 2 - riscv
    */
   openProject(project: number) {
+    // unselected
     if (this.projSelected.length == 0) {
       this.projSelected.push(project)
     } else {
       // non empty 
+      // click on same one
       if (this.projSelected[0] == project) {
-        return;
+        this.projSelected.pop();
       } else {
+        // click on new one
         this.projSelected.pop();
         this.projSelected.push(project);
       }
