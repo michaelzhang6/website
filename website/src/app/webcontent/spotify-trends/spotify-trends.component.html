@@ -4,14 +4,14 @@
     <p>This project uses the Spotify API to display your listening data visually</p>
     <button *ngIf="!devLogin">
         <a
-            href="https://accounts.spotify.com/authorize?client_id=0bbbb8a0172e460cbbdf9b278063e15f&response_type=token&scope=user-top-read&redirect_uri=https:%2F%2Fmichaelzhang6.github.io%2Fwebsite%2F%23projects">Live
+            href="https://accounts.spotify.com/authorize?client_id=0bbbb8a0172e460cbbdf9b278063e15f&response_type=token&scope=user-top-read&redirect_uri=https://michaelzhang6.github.io/website/">
             Login</a>
     </button>
 
     <button *ngIf="devLogin">
         <a
-            href="https://accounts.spotify.com/authorize?client_id=0bbbb8a0172e460cbbdf9b278063e15f&response_type=token&scope=user-top-read&redirect_uri=http://localhost:4200/">Dev
-            Login</a>
+            href="https://accounts.spotify.com/authorize?client_id=0bbbb8a0172e460cbbdf9b278063e15f&response_type=token&scope=user-top-read&redirect_uri=http://localhost:4200/">DEV
+            LOGIN</a>
     </button>
 
     <p *ngIf="loginFailed == true" style="color:red">Login Failed</p>
@@ -22,7 +22,7 @@
     <div *ngIf="topArtists!=undefined">
         <h2>TOP ARTISTS</h2>
         <div style="display:flex; flex-wrap:wrap">
-            <div class="Box" *ngFor="let artist of topArtists.items">
+            <div class="Box" *ngFor="let artist of topArtists['items']">
                 <p style="margin-bottom:1vw" class="header">{{artist.name}}</p>
                 <a href="{{artist.external_urls.spotify}}" target="_blank">
                     <img src={{artist.images[0].url}} class="artistPic">
@@ -34,7 +34,7 @@
     <div *ngIf="topTracks!=undefined">
         <h2>TOP TRACKS</h2>
         <div style="display:flex; flex-wrap:wrap">
-            <div class="Box" *ngFor="let track of topTracks.items">
+            <div class="Box" *ngFor="let track of topTracks['items']">
                 <p class="header">{{track.name}}</p>
                 <a href=" {{track.external_urls.spotify}}" target="_blank">
                     <img src={{track.album.images[0].url}} class="albumCover">
