@@ -1,7 +1,12 @@
 <div style="padding-bottom:5em; text-align:center">
     <!--Projects -->
-    <h2 id="Pr" style="padding-top:1.5em">Projects</h2>
+    <h2 id="Pr" style="padding-top:1.5em">PROJECTS</h2>
     <div id="container">
+        <div (click)="openProject(3)" style="border:1px solid black; background-color:black">
+            <img style="height:12vw;width:12vw;"
+                [ngClass]="{'notSelected': (projSelected[0] != undefined && projSelected[0] != 3)}"
+                src="assets/spotifylogo.png">
+        </div>
         <div (click)="openProject(0)">
             <img style="width:18vw;height:17vw;"
                 [ngClass]="{'notSelected': (projSelected[0] != undefined && projSelected[0] != 0)}"
@@ -21,5 +26,7 @@
     <app-websiteinfo *ngIf="projSelected[0] != undefined && projSelected[0] == 0"></app-websiteinfo>
     <app-aiproject *ngIf="projSelected[0] != undefined && projSelected[0] == 1"></app-aiproject>
     <app-riscv *ngIf="projSelected[0] != undefined && projSelected[0] == 2"></app-riscv>
-    <button *ngIf="projSelected[0] != undefined" (click)="projSelected.pop()">Close</button>
+    <app-spotify-trends *ngIf="projSelected[0] != undefined && projSelected[0] == 3"></app-spotify-trends>
+    <button *ngIf="projSelected[0] != undefined" (click)="projSelected.pop();jumpTop()"
+        style="margin-top:2vw">Close</button>
 </div>

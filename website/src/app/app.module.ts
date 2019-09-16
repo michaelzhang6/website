@@ -12,6 +12,8 @@ import { BudapestComponent } from './webcontent/budapest/budapest.component';
 import { WebsiteinfoComponent } from './webcontent/websiteinfo/websiteinfo.component';
 import { AiprojectComponent } from './webcontent/aiproject/aiproject.component';
 import { RiscvComponent } from './webcontent/riscv/riscv.component';
+import { SpotifyTrendsComponent } from './webcontent/spotify-trends/spotify-trends.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,10 +26,12 @@ import { RiscvComponent } from './webcontent/riscv/riscv.component';
     BudapestComponent,
     WebsiteinfoComponent,
     AiprojectComponent,
-    RiscvComponent
+    RiscvComponent,
+    SpotifyTrendsComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
