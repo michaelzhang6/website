@@ -1,3 +1,4 @@
+@import '@angular/material/prebuilt-themes/purple-green.css';
 /*links*/
 a:link {
     color:#6BC4D6; text-decoration: none;

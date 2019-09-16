@@ -14,31 +14,60 @@
             LOGIN</a>
     </button>
 
-    <p *ngIf="loginFailed == true" style="color:red">Login Failed</p>
+    <p *ngIf="loginFailed == true" style="color:red">Login Failed/Permission Denied</p>
 </div>
 
 <!--Logged In-->
 <div *ngIf="accessToken!=null">
     <div *ngIf="topArtists!=undefined">
-        <h2>TOP ARTISTS</h2>
+        <h2>YOUR TOP ARTISTS</h2>
+        <p class="avgPop">Average Popularity of Your Top Artists:
+            <span style="color: #1DB954;">
+                {{averageArtistPopularity()}}
+            </span>
+        </p>
         <div style="display:flex; flex-wrap:wrap">
-            <div class="Box" *ngFor="let artist of topArtists['items']">
+            <div class="Box" *ngFor="let artist of topArtists['items'];let i = index">
                 <p style="margin-bottom:1vw" class="header">{{artist.name}}</p>
                 <a href="{{artist.external_urls.spotify}}" target="_blank">
                     <img src={{artist.images[0].url}} class="artistPic">
                 </a>
-
+                <div style="display:flex;flex-direction:column">
+                    <p class="popularity">Popularity:
+                        <span style="color:#1DB954">
+                            {{artist.popularity}}
+                        </span>
+                    </p>
+                    <p class="popularity">Followers:
+                        <span style="color:#1DB954">
+                            {{formatNumber(artist.followers.total)}}
+                        </span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
     <div *ngIf="topTracks!=undefined">
-        <h2>TOP TRACKS</h2>
+        <h2>YOUR TOP TRACKS</h2>
+        <p class="avgPop">Average Popularity of Your Top Tracks:
+            <span style="color: #1DB954;">
+                {{averageTrackPopularity()}}
+            </span>
+        </p>
         <div style="display:flex; flex-wrap:wrap">
-            <div class="Box" *ngFor="let track of topTracks['items']">
+            <div class="Box" *ngFor="let track of topTracks['items'];let i = index">
                 <p class="header">{{track.name}}</p>
-                <a href=" {{track.external_urls.spotify}}" target="_blank">
+                <p class="trackArtists">{{formatTrackArtists(i)}}</p>
+                <a href="{{track.external_urls.spotify}}" target="_blank">
                     <img src={{track.album.images[0].url}} class="albumCover">
                 </a>
+                <div style="display:flex;flex-direction:column">
+                    <p class="popularity">Popularity:
+                        <span style="color:#1DB954">
+                            {{track.popularity}}
+                        </span>
+                    </p>
+                </div>
             </div>
         </div>
     </div>

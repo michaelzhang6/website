@@ -14,27 +14,31 @@ import { AiprojectComponent } from './webcontent/aiproject/aiproject.component';
 import { RiscvComponent } from './webcontent/riscv/riscv.component';
 import { SpotifyTrendsComponent } from './webcontent/spotify-trends/spotify-trends.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    CoursesComponent,
-    ProjectsComponent,
-    ExperienceComponent,
-    ContactComponent,
-    BudapestComponent,
-    WebsiteinfoComponent,
-    AiprojectComponent,
-    RiscvComponent,
-    SpotifyTrendsComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        CoursesComponent,
+        ProjectsComponent,
+        ExperienceComponent,
+        ContactComponent,
+        BudapestComponent,
+        WebsiteinfoComponent,
+        AiprojectComponent,
+        RiscvComponent,
+        SpotifyTrendsComponent
+    ],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        AppRoutingModule,
+        MatProgressSpinnerModule,
+        MatProgressBarModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
