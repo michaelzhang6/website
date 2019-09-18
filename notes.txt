@@ -5,4 +5,4 @@ ng build --prod --base-href https://michaelzhang6.github.io/website/
 ngh --dir src/dist
 
 
-If nothing is changing, make sure ngh is using the correct diet directory. This can be found in angular.json output path
+If nothing is changing, make sure ngh is using the correct directory. This can be found in angular.json output path
