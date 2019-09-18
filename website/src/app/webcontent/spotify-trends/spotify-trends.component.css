@@ -9,6 +9,7 @@
     height:20vw;
     width:20vw;
     border-radius:50%;
+    object-fit:cover;
 }
 .albumCover {
     height:20vw;
@@ -30,7 +31,8 @@ p.header{
     height:3.2vw;
     width:25vw;
     white-space:nowrap;
-    margin-bottom:0px
+    margin-bottom:0px;
+    scroll-behavior:smooth;
 }
 p.header::-webkit-scrollbar {
     display: none;
@@ -55,4 +57,24 @@ p {
     overflow-y:hidden;
     overflow-x:scroll;
     white-space:nowrap;
+}
+.showMoreLess {
+    color: #1DB954; 
+    text-align: center;
+    font-size: 1.7vw; 
+    border-radius: .8vw; 
+    border: 1px solid #1DB954; 
+    transition-duration: .8s;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2), 0 1px 2px 0 rgba(0,0,0,0.19); 
+    font-family: 'Montserrat', sans-serif;
+    background-color:transparent;
+    margin-bottom:1vw
+}
+.showMoreLess:hover {
+    color:white;
+    background-color:#1DB954;
+}
+.userHeader{
+    color: #1DB954; 
+    font-size: 3.7vw
 }

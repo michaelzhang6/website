@@ -15,6 +15,6 @@ export class CoursesComponent implements OnInit {
     }
 
     jumpTop() {
-        document.getElementById('courses').scrollIntoView();
+        document.getElementById('courses').scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
 }

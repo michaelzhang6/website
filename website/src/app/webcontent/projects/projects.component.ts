@@ -19,7 +19,6 @@ export class ProjectsComponent implements OnInit {
                 return;
             } else {
                 if (fragment.includes("error") || fragment.includes("access")) {
-                    console.log("Login Attempt")
                     this.openProject(3);
                 }
             }
@@ -56,6 +55,6 @@ export class ProjectsComponent implements OnInit {
     }
 
     jumpTop() {
-        document.getElementById('projects').scrollIntoView();
+        document.getElementById('projects').scrollIntoView({ block: 'start', behavior: 'smooth' });
     }
 }

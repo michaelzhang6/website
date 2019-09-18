@@ -8,30 +8,57 @@ export class SpotifyService {
 
     constructor(private http: HttpClient) { }
 
-    login() {
-        return this.http.get("https://accounts.spotify.com/authorize?client_id=0bbbb8a0172e460cbbdf9b278063e15f&response_type=token&redirect_uri=https:%2F%2Fmichaelzhang6.github.io%2Fwebsite%2F%23projects")
+    /**
+     * Returns a string that is used to redirect the user to Spotify authentication
+     * 
+     * dev - boolean representing if on dev server
+     */
+    login(dev: Boolean) {
+        return (dev) ? "https://accounts.spotify.com/authorize?client_id=0bbbb8a0172e460cbbdf9b278063e15f&response_type=token&scope=user-top-read&redirect_uri=http://localhost:4200/"
+            : "https://accounts.spotify.com/authorize?client_id=0bbbb8a0172e460cbbdf9b278063e15f&response_type=token&scope=user-top-read&redirect_uri=https://michaelzhang6.github.io/website/"
     }
 
+    /**
+     * Returns GET request for user's top artists
+     * 
+     * token - authentication token
+     */
     getTopArtists(token) {
-        const headerDict = {
-            'Authorization': "Bearer " + token
-        };
         const requestOptions = {
-            headers: new HttpHeaders(headerDict),
+            headers: new HttpHeaders({
+                'Authorization': "Bearer " + token
+            }),
         };
 
         return this.http.get("https://api.spotify.com/v1/me/top/artists", requestOptions)
     }
 
+    /**
+     * Returns GET request for user's top tracks
+     * 
+     * token - authentication token
+     */
     getTopTracks(token) {
-        const headerDict = {
-            'Authorization': "Bearer " + token
-        };
         const requestOptions = {
-            headers: new HttpHeaders(headerDict),
+            headers: new HttpHeaders({
+                'Authorization': "Bearer " + token
+            }),
         };
 
         return this.http.get("https://api.spotify.com/v1/me/top/tracks", requestOptions)
+    }
+
+    /**
+     * Returns GET request for user's profile
+     */
+    getUserProfile(token) {
+        const requestOptions = {
+            headers: new HttpHeaders({
+                'Authorization': "Bearer " + token
+            }),
+        };
+
+        return this.http.get("https://api.spotify.com/v1/me", requestOptions)
     }
 
 }

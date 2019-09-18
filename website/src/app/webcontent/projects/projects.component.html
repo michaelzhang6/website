@@ -26,7 +26,8 @@
     <app-websiteinfo *ngIf="projSelected[0] != undefined && projSelected[0] == 0"></app-websiteinfo>
     <app-aiproject *ngIf="projSelected[0] != undefined && projSelected[0] == 1"></app-aiproject>
     <app-riscv *ngIf="projSelected[0] != undefined && projSelected[0] == 2"></app-riscv>
-    <app-spotify-trends *ngIf="projSelected[0] != undefined && projSelected[0] == 3"></app-spotify-trends>
+    <app-spotify-trends id='spotifyTrends' *ngIf="projSelected[0] != undefined && projSelected[0] == 3">
+    </app-spotify-trends>
     <button *ngIf="projSelected[0] != undefined" (click)="projSelected.pop();jumpTop()"
-        style="margin-top:2vw">Close</button>
+        style="margin-top:2vw">Close<span *ngIf="projSelected[0] == 3"> SpotifyTrends</span></button>
 </div>

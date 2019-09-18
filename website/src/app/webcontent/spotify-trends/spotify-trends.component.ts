@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../services/spotify.service';
 import { ActivatedRoute } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-spotify-trends',
@@ -10,15 +9,28 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class SpotifyTrendsComponent implements OnInit {
 
-    constructor(private spotifyService: SpotifyService, private route: ActivatedRoute,
-        private dom: DomSanitizer) { }
+    constructor(private spotifyService: SpotifyService, private route: ActivatedRoute) { }
 
-    accessToken: String;
+    // do not modify! Holds responses from Spotify Service
     topArtists: Object;
     topTracks: Object;
+    userProfile: Object;
+    accessToken: String;
+
+    // login related
     loginFailed: Boolean = undefined;
     devLogin: Boolean = false;
 
+    // arrays holding the displayed top artists and tracks
+    shownTopArtists;
+    shownTopTracks;
+    displayNum = 6;
+
+
+    /**
+     * Initializes the SpotifyTrends component by checking if login is valid. If
+     * valid, display user's info. Otherwise prompt login.
+     */
     ngOnInit() {
         if (window.location.href.includes("localhost")) {
             this.devLogin = true
@@ -30,7 +42,7 @@ export class SpotifyTrendsComponent implements OnInit {
             } else {
                 // scroll back to Projects
                 if (fragment.includes("access")) {
-                    document.getElementById('projects').scrollIntoView();
+                    document.getElementById('spotifyTrends').scrollIntoView({ block: 'start', behavior: 'smooth' });
                 }
 
                 if (fragment.includes("error")) {
@@ -50,6 +62,7 @@ export class SpotifyTrendsComponent implements OnInit {
                             this.loginFailed = false;
                             console.log("Top Artists:\n", data);
                             this.topArtists = data;
+                            this.shownTopArtists = data['items'].slice(0, this.displayNum);
 
                         },
                         error => {
@@ -64,6 +77,20 @@ export class SpotifyTrendsComponent implements OnInit {
                             this.loginFailed = false;
                             console.log("Top Tracks:\n", data);
                             this.topTracks = data;
+                            this.shownTopTracks = data['items'].slice(0, this.displayNum);
+                        },
+                        error => {
+                            console.log(error)
+                            this.loginFailed = true;
+                            this.accessToken = null;
+                        }
+                    );
+
+                    this.spotifyService.getUserProfile(this.accessToken).subscribe(
+                        data => {
+                            this.loginFailed = false;
+                            console.log("User Profile:\n", data);
+                            this.userProfile = data;
                         },
                         error => {
                             console.log(error)
@@ -76,6 +103,18 @@ export class SpotifyTrendsComponent implements OnInit {
         })
     }
 
+    /**
+     * Brings up Login Window
+     * 
+     * dev - boolean representing if on dev server
+     */
+    login(dev: Boolean) {
+        window.location.href = this.spotifyService.login(dev);
+    }
+
+    /**
+     * Returns the average popularity of the artists in topArtists
+     */
     averageArtistPopularity() {
         var avg = 0;
         for (var artist in this.topArtists["items"]) {
@@ -84,6 +123,9 @@ export class SpotifyTrendsComponent implements OnInit {
         return avg / this.topArtists["items"].length
     }
 
+    /**
+     * Returns the average popularity of the artists in topTracks
+     */
     averageTrackPopularity() {
         var avg = 0;
         for (var track in this.topTracks["items"]) {
@@ -92,6 +134,11 @@ export class SpotifyTrendsComponent implements OnInit {
         return avg / this.topTracks["items"].length
     }
 
+    /**
+     *  Returns the Artist name(s) from topTracks as a string  
+     * 
+     *  index - position of track in topTracks array
+     */
     formatTrackArtists(index) {
         if (this.topTracks["items"][index]["artists"].length == 1) {
             return this.topTracks["items"][index]["artists"][0]["name"]
@@ -108,7 +155,54 @@ export class SpotifyTrendsComponent implements OnInit {
         }
     }
 
+    /**
+     * Returns a string of num with commas 
+     * 
+     * num - the number to insert commas into
+     */
     formatNumber(num) {
         return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
+    }
+
+    /**
+     * Scrolls element all the way to the right
+     * 
+     *  element - the DOM element 
+     */
+    scroll(element) {
+        element.scrollLeft += element.scrollWidth;
+    }
+
+    /**
+     * Scrolls element all the way back to the left
+     * 
+     *  element - the DOM element 
+     */
+    scrollBack(element) {
+        element.scrollLeft -= element.scrollWidth;
+    }
+
+    /**
+     * Shows/hides top artists
+     */
+    showArtists() {
+        if (this.shownTopArtists.length > 6) {
+            this.shownTopArtists = this.topArtists['items'].slice(0, this.displayNum);
+            document.getElementById('Artists').scrollIntoView({ block: 'start', behavior: 'smooth' });
+        } else {
+            this.shownTopArtists = this.topArtists['items'];
+        }
+    }
+
+    /**
+     * Shows/hides top tracks
+     */
+    showTracks() {
+        if (this.shownTopTracks.length > 6) {
+            this.shownTopTracks = this.topTracks['items'].slice(0, this.displayNum);
+            document.getElementById('Tracks').scrollIntoView({ block: 'start', behavior: 'smooth' });
+        } else {
+            this.shownTopTracks = this.topTracks['items'];
+        }
     }
 }
