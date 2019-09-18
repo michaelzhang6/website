@@ -17,8 +17,8 @@
 <div *ngIf="accessToken!=null">
     <div *ngIf="userProfile!=undefined">
         <h2 class="userHeader">Welcome
-            <span *ngIf="userProfile.display_name!=null" else userId>{{userProfile.display_name}}!</span>
-            <ng-template #userId>{{userProfile.id}}!</ng-template>
+            <span *ngIf="userProfile['display_name']!=null" else userId>{{userProfile['display_name']}}!</span>
+            <ng-template #userId>{{userProfile['id']}}!</ng-template>
         </h2>
     </div>
     <div *ngIf="topArtists!=undefined">
