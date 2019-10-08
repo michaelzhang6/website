@@ -23,14 +23,14 @@ export class SpotifyService {
      * 
      * token - authentication token
      */
-    getTopArtists(token) {
+    getTopArtists(token: string, timeRange: string) {
         const requestOptions = {
             headers: new HttpHeaders({
                 'Authorization': "Bearer " + token
             }),
         };
 
-        return this.http.get("https://api.spotify.com/v1/me/top/artists", requestOptions)
+        return this.http.get("https://api.spotify.com/v1/me/top/artists?limit=30&time_range=" + timeRange, requestOptions)
     }
 
     /**
@@ -38,14 +38,14 @@ export class SpotifyService {
      * 
      * token - authentication token
      */
-    getTopTracks(token) {
+    getTopTracks(token: string, timeRange: string) {
         const requestOptions = {
             headers: new HttpHeaders({
                 'Authorization': "Bearer " + token
             }),
         };
 
-        return this.http.get("https://api.spotify.com/v1/me/top/tracks", requestOptions)
+        return this.http.get("https://api.spotify.com/v1/me/top/tracks?limit=30&time_range=" + timeRange, requestOptions)
     }
 
     /**

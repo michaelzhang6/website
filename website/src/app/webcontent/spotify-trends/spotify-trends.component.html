@@ -20,6 +20,18 @@
             <span *ngIf="userProfile['display_name']!=null" else userId>{{userProfile['display_name']}}!</span>
             <ng-template #userId>{{userProfile['id']}}!</ng-template>
         </h2>
+        <mat-form-field>
+            <mat-select [(value)]="timePeriod" placeholder="Time Period">
+                <mat-option value="short_term" (click)="getTopArtistsTracks(timePeriod)">
+                    Short Term - 4 Weeks
+                </mat-option>
+                <mat-option value="medium_term" (click)="getTopArtistsTracks(timePeriod)">
+                    Medium Term - 6 Months
+                </mat-option>
+                <mat-option value="long_term" (click)="getTopArtistsTracks(timePeriod)">
+                    Long Term - Years</mat-option>
+            </mat-select>
+        </mat-form-field>
     </div>
     <div *ngIf="topArtists!=undefined">
         <h2 id="Artists">YOUR TOP ARTISTS</h2>

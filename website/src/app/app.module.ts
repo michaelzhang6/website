@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -16,6 +17,8 @@ import { SpotifyTrendsComponent } from './webcontent/spotify-trends/spotify-tren
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
     declarations: [
@@ -33,10 +36,13 @@ import { MatProgressBarModule } from '@angular/material';
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         HttpClientModule,
         AppRoutingModule,
         MatProgressSpinnerModule,
-        MatProgressBarModule
+        MatProgressBarModule,
+        MatSelectModule,
+        MatFormFieldModule
     ],
     providers: [],
     bootstrap: [AppComponent]

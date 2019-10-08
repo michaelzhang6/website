@@ -15,7 +15,7 @@ export class SpotifyTrendsComponent implements OnInit {
     topArtists: Object;
     topTracks: Object;
     userProfile: Object;
-    accessToken: String;
+    accessToken: string;
 
     // login related
     loginFailed: Boolean = undefined;
@@ -25,6 +25,9 @@ export class SpotifyTrendsComponent implements OnInit {
     shownTopArtists;
     shownTopTracks;
     displayNum = 6;
+
+    // time period
+    timePeriod;
 
 
     /**
@@ -57,35 +60,6 @@ export class SpotifyTrendsComponent implements OnInit {
                     var end = fragment.indexOf("&", start);
                     this.accessToken = fragment.substring(start, end);
 
-                    this.spotifyService.getTopArtists(this.accessToken).subscribe(
-                        data => {
-                            this.loginFailed = false;
-                            console.log("Top Artists:\n", data);
-                            this.topArtists = data;
-                            this.shownTopArtists = data['items'].slice(0, this.displayNum);
-
-                        },
-                        error => {
-                            console.log(error)
-                            this.loginFailed = true;
-                            this.accessToken = null;
-                        }
-                    );
-
-                    this.spotifyService.getTopTracks(this.accessToken).subscribe(
-                        data => {
-                            this.loginFailed = false;
-                            console.log("Top Tracks:\n", data);
-                            this.topTracks = data;
-                            this.shownTopTracks = data['items'].slice(0, this.displayNum);
-                        },
-                        error => {
-                            console.log(error)
-                            this.loginFailed = true;
-                            this.accessToken = null;
-                        }
-                    );
-
                     this.spotifyService.getUserProfile(this.accessToken).subscribe(
                         data => {
                             this.loginFailed = false;
@@ -113,6 +87,41 @@ export class SpotifyTrendsComponent implements OnInit {
     }
 
     /**
+     * 
+     */
+    getTopArtistsTracks(timeRange: string) {
+        this.spotifyService.getTopArtists(this.accessToken, timeRange).subscribe(
+            data => {
+                this.loginFailed = false;
+                console.log("Top Artists:\n", data);
+                this.topArtists = data;
+                this.shownTopArtists = data['items'].slice(0, this.displayNum);
+
+            },
+            error => {
+                console.log(error)
+                this.loginFailed = true;
+                this.accessToken = null;
+            }
+        );
+
+        this.spotifyService.getTopTracks(this.accessToken, timeRange).subscribe(
+            data => {
+                this.loginFailed = false;
+                console.log("Top Tracks:\n", data);
+                this.topTracks = data;
+                this.shownTopTracks = data['items'].slice(0, this.displayNum);
+            },
+            error => {
+                console.log(error)
+                this.loginFailed = true;
+                this.accessToken = null;
+            }
+        );
+
+    }
+
+    /**
      * Returns the average popularity of the artists in topArtists
      */
     averageArtistPopularity() {
@@ -120,7 +129,7 @@ export class SpotifyTrendsComponent implements OnInit {
         for (var artist in this.topArtists["items"]) {
             avg += this.topArtists["items"][artist]["popularity"]
         }
-        return avg / this.topArtists["items"].length
+        return (avg / this.topArtists["items"].length).toFixed(2);
     }
 
     /**
@@ -131,7 +140,7 @@ export class SpotifyTrendsComponent implements OnInit {
         for (var track in this.topTracks["items"]) {
             avg += this.topTracks["items"][track]["popularity"]
         }
-        return avg / this.topTracks["items"].length
+        return (avg / this.topTracks["items"].length).toFixed(2);
     }
 
     /**
@@ -186,7 +195,7 @@ export class SpotifyTrendsComponent implements OnInit {
      * Shows/hides top artists
      */
     showArtists() {
-        if (this.shownTopArtists.length > 6) {
+        if (this.shownTopArtists.length > this.displayNum) {
             this.shownTopArtists = this.topArtists['items'].slice(0, this.displayNum);
             document.getElementById('Artists').scrollIntoView({ block: 'start', behavior: 'smooth' });
         } else {
@@ -198,7 +207,7 @@ export class SpotifyTrendsComponent implements OnInit {
      * Shows/hides top tracks
      */
     showTracks() {
-        if (this.shownTopTracks.length > 6) {
+        if (this.shownTopTracks.length > this.displayNum) {
             this.shownTopTracks = this.topTracks['items'].slice(0, this.displayNum);
             document.getElementById('Tracks').scrollIntoView({ block: 'start', behavior: 'smooth' });
         } else {
