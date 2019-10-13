@@ -61,6 +61,11 @@ h4 {
     color: #6B6B6B;
     font-family: 'Oswald', sans-serif;
 }
+h5 {
+    font-size: 1.20vw;
+    color: #6B6B6B;
+    font-family: 'Oswald', sans-serif;
+}
                 
 /*misc*/
 nav {

@@ -1,16 +1,53 @@
-div div {
-    padding-left:.5em
-}
-div h3 {
-    padding-left:.4em
+div.expPosition {
+    padding-left:.5em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 i {
     font-size:1.5em
 }
-div.logo {
-    border-radius:50%;
-    overflow:hidden;
-    width:100px;
-    height:100px;
+h4 {
+    font-size: 2vw;
+    margin-bottom: 0vw 
+}
+h5 {
+    font-size: 1.6vw;
+    margin-top:.2vw;
+    margin-bottom:.2vw
+}
+a h4:hover {
+    color: #000000
+}
+div.logoBox {
+    display: flex; 
+    flex-direction:row; 
+    align-items:center; 
+    justify-content:center;
+}
+div.imgWrapper{
+    border-radius: 50%;
+    /* border: 1px solid #b3b3b3; */
+    height:15vw;
+    width:15vw;
+    object-fit:cover;
+    display:flex;
     align-items:center;
+    justify-content:center;
+    overflow: hidden;
+    margin:.5vw;
+}
+div.imgWrapper:hover{
+    box-shadow: 0px 0px 8px 3px #9c9c9c
+}
+.notSelected {
+    opacity: 0.5
+}
+.expDescription {
+    text-align: left;
+    margin-bottom:-2vw
+}
+.expBox{
+    width:80%
 }
