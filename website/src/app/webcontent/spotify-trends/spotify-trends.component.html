@@ -11,6 +11,13 @@
     </button>
 
     <p *ngIf="loginFailed == true" style="color:red">Login Failed/Permission Denied</p>
+
+    <p>
+        Tools Used: <br>
+        <i class="mdi mdi-language-typescript" title="TypeScript"></i>
+        <i class="mdi mdi-language-html5" title="HTML5"></i>
+        <i class="mdi mdi-language-css3" title="CSS3"></i>
+    </p>
 </div>
 
 <!--Logged In-->
@@ -82,7 +89,8 @@
                 <div class="Box" *ngFor="let track of shownTopTracks;let i = index">
                     <p class="header" (mouseenter)="scroll($event.target)" (mouseleave)="scrollBack($event.target)">
                         {{track.name}}</p>
-                    <p class="trackArtists">{{formatTrackArtists(i)}}</p>
+                    <p class="trackArtists" (mouseenter)="scroll($event.target)"
+                        (mouseleave)="scrollBack($event.target)">{{formatTrackArtists(i)}}</p>
                     <a href="{{track.external_urls.spotify}}" target="_blank">
                         <img src={{track.album.images[0].url}} class="albumCover">
                     </a>

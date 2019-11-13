@@ -10,52 +10,57 @@ import { BudapestComponent } from "./webcontent/budapest/budapest.component";
 import { WebsiteinfoComponent } from './webcontent/websiteinfo/websiteinfo.component';
 import { AiprojectComponent } from './webcontent/aiproject/aiproject.component';
 import { RiscvComponent } from "./webcontent/riscv/riscv.component";
+import { GraphicsComponent } from './webcontent/graphics/graphics.component';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    component: HomeComponent
-  },
-  {
-    path: '',
-    component: HomeComponent
-  },
-  {
-    path: 'courses',
-    component: CoursesComponent
-  },
-  {
-    path: 'projects',
-    component: ProjectsComponent
-  },
-  {
-    path: 'experience',
-    component: ExperienceComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
-  },
-  {
-    path: 'budapest',
-    component: BudapestComponent
-  },
-  {
-    path: 'websiteinfo',
-    component: WebsiteinfoComponent
-  },
-  {
-    path: 'ai',
-    component: AiprojectComponent
-  },
-  {
-    path: 'riscv',
-    component: RiscvComponent
-  }
+    {
+        path: 'home',
+        component: HomeComponent
+    },
+    {
+        path: '',
+        component: HomeComponent
+    },
+    {
+        path: 'courses',
+        component: CoursesComponent
+    },
+    {
+        path: 'projects',
+        component: ProjectsComponent
+    },
+    {
+        path: 'experience',
+        component: ExperienceComponent
+    },
+    {
+        path: 'contact',
+        component: ContactComponent
+    },
+    {
+        path: 'budapest',
+        component: BudapestComponent
+    },
+    {
+        path: 'websiteinfo',
+        component: WebsiteinfoComponent
+    },
+    {
+        path: 'ai',
+        component: AiprojectComponent
+    },
+    {
+        path: 'riscv',
+        component: RiscvComponent
+    },
+    {
+        path: 'graphics',
+        component: GraphicsComponent
+    }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

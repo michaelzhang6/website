@@ -54,6 +54,8 @@ p {
 }
 .trackArtists {
     margin-top:.3vw;
+    height:2.0vw;
+    width:20vw;
     overflow-y:hidden;
     overflow-x:scroll;
     white-space:nowrap;
@@ -77,4 +79,7 @@ p {
 .userHeader{
     color: #1DB954; 
     font-size: 3.7vw
+}
+i {
+    font-size: 1.5em;
 }

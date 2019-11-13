@@ -19,6 +19,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { GraphicsComponent } from './webcontent/graphics/graphics.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         WebsiteinfoComponent,
         AiprojectComponent,
         RiscvComponent,
-        SpotifyTrendsComponent
+        SpotifyTrendsComponent,
+        GraphicsComponent
     ],
     imports: [
         BrowserModule,
