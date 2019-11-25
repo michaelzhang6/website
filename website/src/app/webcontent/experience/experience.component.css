@@ -49,5 +49,9 @@ div.imgWrapper:hover{
     margin-bottom:-2vw
 }
 .expBox{
-    width:80%
+    width:80%;
+}
+h5{
+    margin-bottom:-.5vw;
+    margin-top: 1vw;
 }
