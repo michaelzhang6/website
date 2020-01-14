@@ -2,6 +2,10 @@
     <!-- Experience-->
     <h2 id="Ex" style="padding-top:1.5em">EXPERIENCE</h2>
     <div class="logoBox">
+        <div class="imgWrapper" style="background-color:white" (click)="openProject(5)">
+            <img src="assets/amazon.jpg" style="height: 13vw; width: 13vw;"
+                [ngClass]="{'notSelected': (projSelected[0] != undefined && projSelected[0] != 5)}">
+        </div>
         <div class="imgWrapper" style="background-color:#e61231" (click)="openProject(0)">
             <img src="assets/raytheon.png" style="height: 100%; width: 150%"
                 [ngClass]="{'notSelected': (projSelected[0] != undefined && projSelected[0] != 0)}">
@@ -57,7 +61,7 @@
         <a href="http://cis.cornell.edu/" target="_blank" title="http://cis.cornell.edu/">
             <h4>Cornell CIS Student Employment</h4>
         </a>
-        <h5>Course Consultant - CS1110 (2018-Present)</h5>
+        <h5>Course Consultant - CS1110: Introduction to Computing (2018-Present)</h5>
         <div class="expBox">
             <p class="expDescription">
                 - Answers student questions and reinforces concepts taught in class during weekly office hours <br>
@@ -120,6 +124,15 @@
                 - Co-Founded the Spikeball Club at Cornell University <br>
                 - Organizes practices and trips to tournaments for a
                 15 member team.
+            </p>
+        </div>
+    </div>
+    <div class="expPosition" *ngIf="projSelected[0] != undefined && projSelected[0] == 5">
+        <h4>Amazon</h4>
+        <h5>Software Development Engineer Intern (Summer 2020)</h5>
+        <div class="expBox">
+            <p class="expDescription">
+                - Incoming Software Development Engineer Intern
             </p>
         </div>
     </div>

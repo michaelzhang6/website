@@ -25,6 +25,7 @@ export class ExperienceComponent implements OnInit {
      * 2 - atlantis
      * 3 - acsu
      * 4 - spikeball
+     * 5 - amazon
      */
     openProject(project: number) {
         // unselected
