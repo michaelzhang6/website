@@ -22,6 +22,8 @@
         "@angular/platform-browser-dynamic": "~8.1.2",
         "@angular/router": "~8.1.2",
         "@mdi/font": "^3.9.97",
+        "@mdi/js": "^4.7.95",
+        "@mdi/react": "^1.2.1",
         "@types/jquery": "^3.3.31",
         "jquery": "^3.4.1",
         "rxjs": "~6.4.0",

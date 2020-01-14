@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { mdiGithubCircle } from '@mdi/js';
 
 @Component({
     selector: 'app-contact',
